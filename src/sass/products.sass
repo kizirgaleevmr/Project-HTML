@@ -1,0 +1,184 @@
+/* Блок со стульями  */
+//миксин для шрифта
+@mixin text($fm, $fw, $fs, $lh, $lets)
+  font:
+    family: $fm
+    weight: $fw
+    size: $fs
+  letter-spacing: $lets
+  line-height: $lh
+
+//переменная для семейство шрифта
+$font-stack: "Playfair Display"
+$font-stack-open: "Open Sans"
+//переменные для цвета текста
+$color-title-big-price-text: rgb(48, 48, 50)
+$color-black-text: rgb(0, 0, 0)
+$color-link-gray: rgba(0, 0, 0, 0.4)
+$color-small-price: rgba(0, 0, 0, 0.4)
+/*Верхний отступ для надписи последжний шанс*/
+.products
+  padding-top: 73px
+  padding-bottom: 111px
+  position: relative
+  hr
+    margin-bottom: 37px
+  ul
+    margin-bottom: 25px
+  //Оформление текста ссылки
+  a
+    @include text($font-stack-open, 600, 16px, 22px, 0)
+    color: $color-link-gray
+    margin-right: 48px
+    &:hover
+      color: $color-black-text
+    //убираем у последней ссылки правый отступ
+  li:last-child
+     a
+       margin-right: 0
+
+/*фон для блока справа*/
+.products:before
+  display: block
+  position: absolute
+  content: ""
+  width: 55%
+  height: 545px
+  background: rgb(250, 236, 233)
+  top: 0
+  left: 0
+  z-index: -1
+
+/*Заголовок последний шанс*/
+.products-title
+  @include text($font-stack, 700, 28px, 37px, 0.2vw)
+  margin-bottom: 7px
+
+.products-card-wrapper
+  row-gap: 70px
+  column-gap: 31px
+  .card
+    position: relative
+    width: 209px
+    height: 355px
+    border-top: 5px solid transparent
+    padding-top: 27px
+    padding-left: 26px
+    transition: all 0.2s ease
+    p
+      @include text($font-stack-open, 400, 16px, 22px, 0)
+      margin-bottom: 0
+
+    .price-big
+      @include text($font-stack-open, 600, 28px, 38px, 0)
+      color: $color-title-big-price-text
+      margin-right: 11px
+
+    .price-small
+      @include text($font-stack-open, 600, 16px, 22px, 0)
+      color: $color-small-price
+
+/*Фон для карт продукции*/
+.bg-image-1
+  background: #fff url("../../assets/chair-caramel-desktop.png") no-repeat center
+  background-position: bottom right
+  background-clip: padding-box
+
+.bg-image-2
+  background: #fff url("../../assets/chair-cloud-desktop.jpg") no-repeat center
+  background-position: bottom right
+  background-clip: padding-box
+
+.bg-image-3
+  background: #fff url("../../assets/chair-owl-desktop.png") no-repeat center
+  background-position: bottom right
+  background-clip: padding-box
+.bg-image-4
+  background: #fff url("../../assets/chair-maya-desktop.jpg") no-repeat center
+  background-position: bottom right
+  background-clip: padding-box
+
+.bg-image-5
+  background: #fff url("../../assets/chair-messi-desktop.png") no-repeat center
+  background-position: bottom right
+  background-clip: padding-box
+
+/*Добавляем полосу при наведении для карты*/
+.card:hover
+  border-top: 5px solid black
+/*Добавляем купить при наведении*/
+.card:hover::before
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  content: "КУПИТЬ"
+  left: 0
+  bottom: -45px
+  width: 209px
+  height: 58px
+  background: $color-title-big-price-text
+  font:
+    family: $font-stack-open
+    weight: 400
+    size: 16px
+  line-height: 22px
+  letter-spacing: 0.7vw
+  color: #fff
+@media (max-width: 1920px)
+  .mySwiperProducts
+    display: none
+@media (max-width: 425px)
+  .products
+    padding-top: 20px
+    padding-bottom: 0
+    &-title
+      font-size: 20px
+      line-height: 27px
+    //Убираем розовую полосу слева
+    &:before
+      display: none
+    hr
+      margin-bottom: 30px
+  .products-list
+    justify-content: space-between
+  .products-card-wrapper
+    display: none
+  .mySwiperProducts
+    display: block
+    height: 520px
+    .card
+      width: 100%
+      height: 400px
+      margin-bottom: 20px
+      padding-top: 31px
+      padding-left: 25px
+      //Убираем кнопку купить
+      &:hover
+        &:before
+          bottom: 67px
+          width: 100%
+    .swiper-scrollbar
+      width: 75%
+      bottom: 27px
+      height: 3px
+    .swiper-pagination
+      font-size: 15px
+      font-weight: 600
+      bottom: 22px
+      text-align: right
+      left: -15px
+    p
+      @include text($font-stack-open, 400, 16px, 22px, 0)
+      margin-bottom: 0
+    .price-big
+      @include text($font-stack-open, 600, 28px, 38px, 0)
+      color: $color-title-big-price-text
+      margin-right: 11px
+    .price-small
+      @include text($font-stack-open, 600, 16px, 22px, 0)
+      color: $color-small-price
+@media (max-width: 320px)
+  .mySwiperProducts
+    .card
+      margin-bottom: 96px

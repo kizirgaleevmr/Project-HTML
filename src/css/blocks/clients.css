@@ -1,0 +1,100 @@
+/* Блок со слайдером (клиенты)  */
+/*Делаем нижний отступ для следующего блока последний шанс*/
+.clients {
+    margin-bottom: 100px;
+}
+
+.clients .swiper{
+    position: relative;
+    max-width: 825px;
+    overflow: hidden;
+}
+
+.clients .swiper-slide {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+/*Убираем правый отступ у класса актив*/
+.clients .swiper-slide-active{
+    margin: 0;
+}
+.clients  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+.clients .swiper-pagination {
+    position: relative;
+    bottom: 0;
+}
+.clients .swiper-button-prev, .clients .swiper-button-next{
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgb(0,0,0,0.1);
+}
+.clients .swiper-button-prev:hover, .clients .swiper-button-next:hover{
+    background: rgb(250, 236, 233);
+}
+
+.clients .swiper-button-prev::after{
+    content: url("../../assets/arrow-left.svg");
+    font-size: 16px;
+}
+.clients .swiper-button-next::after{
+    content: url("../../assets/arrow-right.svg");
+    font-size: 16px;
+}
+.clients-avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.clients-title{
+    font-weight: 700;
+    font-size: 18px;
+}
+.clients-subtitle{
+    display: block;
+    margin-bottom: 20px;
+}
+.clients-content_text{
+    width: 653px;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 154.36%;
+    margin-bottom: 10px;
+}
+
+.clients .swiper-pagination-bullet {
+    background: transparent;
+    border: 1px solid rgb(179, 179, 179);
+}
+.clients .swiper-pagination-bullet-active {
+    background: rgb(68, 67, 72, 1);
+}
+
+
+/*Адаптивка*/
+@media (max-width: 1440px) {
+/*    ЗДесь ничего не меняем*/
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+    /*Меняем ширину текса в слайдере*/
+    .clients-content_text{
+        width: 500px;
+    }
+}
+@media (max-width: 425px) {
+    /*Скрываем слайдер клинет*/
+    .clients{
+        display: none;
+    }
+}
+@media (max-width: 375px) {}
+@media (max-width: 320px) {}

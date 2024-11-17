@@ -1,0 +1,235 @@
+/* Блок новинки */
+*::after, *::before, * {
+    box-sizing: border-box;
+}
+
+.news {
+    margin-bottom: 102px;
+}
+
+/*Грид*/
+.myGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+}
+
+.news-right {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/*Выставляем текст в блоках по центру*/
+.news-left, .news-right {
+    text-align: center;
+}
+
+/*отступ между картами в левой колонки*/
+.news-left {
+    row-gap: 37px;
+}
+
+/*Текст для надписи НОВИНКИ*/
+.news-left_card__text {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 37px;
+    letter-spacing: 0.2vw;
+    margin-bottom: 7px;
+    text-align: left;
+}
+
+/*полоса под текстом НОВИНКИ*/
+hr {
+    width: 90px;
+    border: 2px solid black;
+    margin: 0;
+}
+
+/*Текс в картах*/
+.description {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 7px;
+}
+
+/*Цена в картах*/
+.price {
+    display: block;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 16px;
+}
+
+/*Верхний отступ для текста в левой колонки*/
+.text-pd-top {
+    padding-top: 198px;
+}
+
+/*Плавный переход при наведении*/
+.card-2, .card-3, .card-4, .news-right {
+    transition: all 0.4s ease;
+}
+
+/*background для карт*/
+.card-2 {
+    background: #fff url("../../assets/chair-twilight-desktop.jpg") no-repeat center;
+    background-position: 50% 20px;
+}
+
+.card-3 {
+    background: #fff url("../../assets/chandelier-desktop.jpg") no-repeat center;
+    background-position: top;
+}
+
+.card-4 {
+    background: #fff url("../../assets/table-cream-desktop.png") no-repeat center;
+    background-position: top;
+}
+
+.news-right {
+    background: #fff url("../../assets/chair-white-desktop.jpg") no-repeat center;
+    background-position: top;
+}
+
+/*меняем фон карт при наведении*/
+.card-2:hover {
+    background: rgb(250, 236, 233) url("../../assets/chair-twilight-desktop.jpg") no-repeat center;
+    background-position: 50% 20px;
+}
+
+.card-3:hover {
+    background: rgb(250, 236, 233) url("../../assets/chandelier-desktop.jpg") no-repeat center;
+    background-position: top;
+}
+
+.card-4:hover {
+    background: rgb(250, 236, 233) url("../../assets/table-cream-desktop.png") no-repeat center;
+    background-position: top;
+}
+
+.news-right:hover {
+    background: rgb(250, 236, 233) url("../../assets/chair-white-desktop.jpg") no-repeat center;
+    background-position: top;
+}
+
+/*Отступ для текста сверху для карты справа*/
+.news-right .description {
+    padding-top: 514px;
+}
+
+/* Адаптив */
+@media (max-width: 1440px) {
+    /*    ЗДесь ничего не меняем*/
+}
+
+@media (max-width: 1024px) {
+    /*Корректируем фон для карты*/
+    .news-right {
+        background: #fff url("../../assets/chair-white-desktop.jpg") no-repeat center;
+        background-position: top;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-1 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .card-2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .card-3 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .card-4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .news-right {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-size: 60%;
+        padding: 0 40px;
+    }
+    .news-right:hover{
+        background-size: 60%;
+    }
+    /*Меняем отступ текста у карты*/
+    .news-right .description {
+        padding-top: 198px;
+    }
+}
+
+@media (max-width: 425px) {
+    .news-left_card__text{
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .news {
+        margin-bottom: 30px;
+    }
+    .card-2 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .card-3 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .card-4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .news-right {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+}
+
+@media (max-width: 376px) {
+/*Меняем отступ для grid*/
+    .news-left{
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+}

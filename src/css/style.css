@@ -1,0 +1,13 @@
+@import "../css/fonts.css";
+@import "../css/vendor/normalize.css"; /* нормализация стилей */
+@import "../css/main.css";
+@import "../css/libs/swiper.css"; /* исходники swiper */
+@import "../css/vendor/flex.css"; /* атомарные классы flex */
+@import "../css/blocks/header.css"; /* шапка приложения */
+@import "../css/blocks/news.css";
+@import "../css/blocks/clients.css";
+@import "../css/blocks/products.css";
+@import "../css/blocks/footer.css";
+
+
+
