@@ -26,12 +26,13 @@ $color-small-price: rgba(0, 0, 0, 0.4)
   ul
     margin-bottom: 25px
   //Оформление текста ссылки
-  a
-    @include text($font-stack-open, 600, 16px, 22px, 0)
-    color: $color-link-gray
-    margin-right: 48px
-    &:hover
-      color: $color-black-text
+  .products-list
+    a
+      @include text($font-stack-open, 600, 16px, 22px, 0)
+      color: $color-link-gray
+      margin-right: 48px
+      &:hover
+        color: $color-black-text
     //убираем у последней ссылки правый отступ
   li:last-child
      a
@@ -68,6 +69,7 @@ $color-small-price: rgba(0, 0, 0, 0.4)
     p
       @include text($font-stack-open, 400, 16px, 22px, 0)
       margin-bottom: 0
+      color: $color-title-big-price-text
 
     .price-big
       @include text($font-stack-open, 600, 28px, 38px, 0)

@@ -6,13 +6,16 @@
   padding-bottom: 111px;
   position: relative;
 }
+
 .products hr {
   margin-bottom: 37px;
 }
+
 .products ul {
   margin-bottom: 25px;
 }
-.products a {
+
+.products .products-list a {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 16px;
@@ -21,9 +24,11 @@
   color: rgba(0, 0, 0, 0.4);
   margin-right: 48px;
 }
-.products a:hover {
-  color: rgb(0, 0, 0);
+
+.products .products-list a:hover {
+  color: black;
 }
+
 .products li:last-child a {
   margin-right: 0;
 }
@@ -35,7 +40,7 @@
   content: "";
   width: 55%;
   height: 545px;
-  background: rgb(250, 236, 233);
+  background: #faece9;
   top: 0;
   left: 0;
   z-index: -1;
@@ -55,6 +60,7 @@
   row-gap: 70px;
   column-gap: 31px;
 }
+
 .products-card-wrapper .card {
   position: relative;
   width: 209px;
@@ -64,6 +70,7 @@
   padding-left: 26px;
   transition: all 0.2s ease;
 }
+
 .products-card-wrapper .card p {
   font-family: "Open Sans";
   font-weight: 400;
@@ -71,16 +78,19 @@
   letter-spacing: 0;
   line-height: 22px;
   margin-bottom: 0;
+  color: #303032;
 }
+
 .products-card-wrapper .card .price-big {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 28px;
   letter-spacing: 0;
   line-height: 38px;
-  color: rgb(48, 48, 50);
+  color: #303032;
   margin-right: 11px;
 }
+
 .products-card-wrapper .card .price-small {
   font-family: "Open Sans";
   font-weight: 600;
@@ -137,7 +147,7 @@
   bottom: -45px;
   width: 209px;
   height: 58px;
-  background: rgb(48, 48, 50);
+  background: #303032;
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 16px;
@@ -151,6 +161,7 @@
     display: none;
   }
 }
+
 @media (max-width: 425px) {
   .products {
     padding-top: 20px;
@@ -213,7 +224,7 @@
     font-size: 28px;
     letter-spacing: 0;
     line-height: 38px;
-    color: rgb(48, 48, 50);
+    color: #303032;
     margin-right: 11px;
   }
   .mySwiperProducts .price-small {
@@ -225,10 +236,9 @@
     color: rgba(0, 0, 0, 0.4);
   }
 }
+
 @media (max-width: 320px) {
   .mySwiperProducts .card {
     margin-bottom: 96px;
   }
 }
-
-/*# sourceMappingURL=products.css.map */
